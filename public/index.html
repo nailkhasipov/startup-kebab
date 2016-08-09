@@ -4,53 +4,41 @@
     <meta charset="utf-8">
     <title>Startup Kebab</title>
     <link rel="stylesheet" type="text/css" href="semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
     <script src="jquery-3.1.0.min.js"></script>
     <script src="semantic.min.js"></script>
     <script src="app.js"></script>
   </head>
   <body>
+    <div class="ui pointing menu">
+      <a class="item active">Главная </a>
+      <a class="item">Сообщения </a>
+      <a class="item">Игроки </a>
+      <a class="item">Друзья </a>
+      <div class="right menu">
+        <a class="ui item">Войти </a>
+      </div>
+    </div>
     <div class="ui container">
-      <div class="ui pointing menu">
-        <a class="item active">Главная </a>
-        <a class="item">Сообщения </a>
-        <a class="item">Друзья </a>
-        <div class="right menu">
-          <a class="ui item">Войти </a>
-        </div>
-      </div>
       <div class="ui segment">
-        <p>Добро пожаловать на Startup Kebab!</p>
-        <button id="start-button" class="ui button">Начать </button>
-      </div>
-
-      <div class="ui small modal">
-        <div class="header">
-          Регистрация
-        </div>
-        <div class="content">
-          <form class="ui form register-form">
-            <div class="field">
-              <label>Email</label>
-              <input type="text" name="first-name" placeholder="Email">
-            </div>
-            <div class="field">
-              <label>Пароль</label>
-              <input type="text" name="last-name" placeholder="Пароль">
-            </div>
-            <div class="field">
-              <div class="ui checkbox">
-                <input type="checkbox" tabindex="0" class="hidden">
-                <label>Я принимаю условия пользовательского соглашения</label>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="actions">
-          <div class="ui positive right labeled icon button">
-            Зарегистрироваться
-            <i class="checkmark icon"></i>
+        <h2 class="ui center aligned icon header promo"><i class="circular marker icon"></i>Добро пожаловать на Стартап Кебаб!</h2>
+        <form id="register-form" class="ui form register-form">
+          <div class="field">
+            <label>Email</label>
+            <input type="email" id="register-form-email" name="email" placeholder="Email" required="true">
           </div>
-        </div>
+          <div class="field">
+            <label>Пароль</label>
+            <input type="password" id="register-form-password" name="password" placeholder="Пароль" required="true">
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" tabindex="0" class="hidden">
+              <label>Я принимаю условия пользовательского соглашения</label>
+            </div>
+          </div>
+          <button class="ui button" type="submit">Зарегистрироваться</button>
+        </form>
       </div>
     </div>
 
